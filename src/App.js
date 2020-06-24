@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container, Row, Col} from 'react-bootstrap'
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container className="mainContainer" fluid="sm">
+        <Row>
+          <Col><h1 className="titleText">TUF-2000M-PARSER</h1></Col>
+        </Row>
+        <div className="valueGrid">
+        <Row className="legendRow">
+          <Col>Variable Name and Unit (if applicable)</Col><Col>Value</Col>
+        </Row>
+        <Row>
+          <Col></Col>
+        </Row>
+        </div>
+      </Container>
     </div>
   );
 }
+
 
 export default App;
