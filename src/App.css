@@ -2,14 +2,13 @@
   background-color: rgb(209, 209, 209);
   text-align: center;
   min-height: 100vh;
-  padding-top: 20px
+  padding: 10px;
 }
 
 .mainContainer {
   background-color: #f1f1f1;
   min-height: 500px;
   color: black;
-  margin-top: 20px;
 }
 
 .titleText {
@@ -31,3 +30,8 @@
   overflow-wrap:break-word;
 }
  
+@media only screen and (max-width: 600px) {
+  .mainContainer{
+    margin-top: 0px;
+  }
+}

@@ -24,7 +24,7 @@ export default class DataGrid extends Component {
                 <Row className="legendRow">
                     <Col>Legend and unit</Col><Col>Value</Col>
                 </Row>
-                <Row><Col>{this.state.data[0]}</Col></Row>
+                <Row><Col>Timestamp</Col><Col>{this.state.data[0]}</Col></Row>
                 {this.state.data.map((d, i) => {
                     if(i !== 0){
                    return <Row key={i}><Col>{d[3]}</Col><Col className="dataCol">{d[2]}</Col></Row>

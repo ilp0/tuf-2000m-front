@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="mainContainer" fluid="sm">
+      <Container className="mainContainer">
         <Row>
           <Col><h1 className="titleText">TUF-2000M-PARSER</h1></Col>
         </Row>
