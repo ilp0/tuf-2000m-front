@@ -25,6 +25,9 @@
 }
 
 .legendRow {
-  
+  font-weight: 700;
+}
+.dataCol {
+  overflow-wrap:break-word;
 }
  

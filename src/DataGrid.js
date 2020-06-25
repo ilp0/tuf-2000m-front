@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
+import './App.css';
 
 export default class DataGrid extends Component {
 
@@ -25,19 +26,19 @@ export default class DataGrid extends Component {
                 </Row>
                 <Row><Col>{this.state.data[0]}</Col></Row>
                 {this.state.data.map((d, i) => {
-                    if(i != 0){
-                   return <Row><Col>{d[3]}</Col><Col>{d[2]}</Col></Row>
+                    if(i !== 0){
+                   return <Row key={i}><Col>{d[3]}</Col><Col className="dataCol">{d[2]}</Col></Row>
                     }
-                })};
+                })}
             </div>
         )
         } else return "Loading..."
         
     }
-
+    //simple api fetch
     getData(){
         let curDomain = window.location.hostname;
-        fetch("http://192.168.1.13:5000")
+        fetch("http://"+curDomain+":5000")
         .then(res => res.json())
         .then(async (res) => {
             this.setState({
